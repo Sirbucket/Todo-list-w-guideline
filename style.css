@@ -1,0 +1,137 @@
+body {
+    background-color: steelblue;
+    font-family:calibri;
+    margin-left: 240px;
+}
+
+.title {
+    color:white;
+    margin-left: 32px;
+    width: 320px;
+}
+
+.subtitle {
+    color:white;
+    margin-left: 32px;
+}
+
+.new-todo-item {
+    padding: 1em;
+    margin-left: 32px;
+    width: 320px;
+    background-color: lightsteelblue;
+    color:black;
+}
+
+.new-todo-item h2 {
+    font-size: 16px;
+    margin: 0;
+    border-bottom: 1px solid #aaa;
+}
+
+.new-todo-item label {
+    display: inline-block;
+    width: 18em;
+    text-align: justify;  
+    width: 120px;
+}
+
+.new-todo-item div{
+    margin-top: 12px;
+}
+
+.new-todo-item button {
+    background-color:white;
+}
+
+.todo-list li {
+    color:darkslategray;
+}
+
+.todo-list {
+    padding: 32px;
+    margin-top: 16px;
+    margin-left: 32px;
+    background-color: lightsteelblue;
+    width: 640px;
+}
+
+.todo-item label {
+    /* Lay each item label in our todo-item as a grid */
+    display : grid;
+    /* grid-template-areas let us name areas
+    in the grid by using simple words. So here,
+    the checkbox takes up two rows of the grid. */
+    grid-template-areas : 
+        "checkbox description"
+        "checkbox due";
+    /* This lets us specify the size of our columns,
+    so the checkbox will be 48px and the right-hand size
+    will be as big as it needs to be to fit the content */
+    grid-template-columns: 48px auto;
+}
+
+.todo-item input {
+    /* Put the checkbox in the checkbox area - this matches
+    the words we used in grid-template-areas above */
+    grid-area: checkbox;  
+    place-self: center;
+    /* Make our checkbox nice and big */
+    width: 32px;
+    height: 32px;  
+}
+
+.description {
+    /* Make the description bigger */
+    font-size: 18px;
+    color: #222;
+    grid-area : description;
+}
+
+.due {
+    grid-area : due;
+    font-size: 14px;
+    color: #666;
+}
+
+.new-todo-item input:hover, input:active {
+    transform: scale(1.05);
+    /* Take a half second to do the transition */
+    transition: all 500ms;
+}
+
+.submit:hover {
+    transform: scale(1.1);
+    /* Take a half second to do the transition */
+    transition: all 500ms;
+}
+    
+.submit:active {
+    transform: scale(0.9);
+    /* Take a half second to do the transition */
+    transition: all 50ms;
+}
+    
+.clear:hover {
+    transform: scale(1.1);
+    /* Take a half second to do the transition */
+    transition: all 500ms;
+}
+    
+.clear:active {
+    transform: scale(0.9);
+    /* Take a half second to do the transition */
+    transition: all 50ms;
+}
+    
+.todo-item input:checked {
+    transform: scale(0.7);
+    /* Take a half second to do the transition */
+    transition: all 500ms;
+}
+    
+.todo-item input:hover {
+    transform: scale(1.2);
+    /* Take a half second to do the transition */
+    transition: all 500ms;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TODO App</title>
+    </head>
+    <body>
+        <div class="new-todo-item">
+            <h2>New item: Hit submit to add to list</h2>
+            <div>
+                <label>Description: <input class="desc" type="text"></label>
+            </div>
+            <div>
+                <label>Due: <input class="due" type="datetime"></label>
+            </div>
+            <div>
+                <label>
+                    <button class="submit" type="button">Submit</button>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <button class = "clear" type = "button"> Clear Items </button>
+                </label>
+            </div>
+        </div>
+        <template id="todo-item">
+            <li class="todo-item">
+                <label>
+                    <input class="checkbox" type="checkbox">
+                    <span class="description" contenteditable = "true">Make Breakfast</span>
+                    <div class="due" contenteditable = "true">Due: September 8th</div>
+                </label>                
+            </li>  
+        </template>
+        <h1 class = "title" contenteditable="true"> My To Do List (change me!) </h1>
+        <h4 class = "subtitle"> Limit of 15 </h4>
+        <div id="app">
+            <ol class="todo-list">
+            </ol>
+        </div>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>
